@@ -1,0 +1,32 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/terminal.css";
+---
+
+<Layout title="home">
+  <div>
+    <h1>Welcome to jonprell.com! (v2.0.0)</h1>
+    <datetime>{new Date().toLocaleString()}</datetime>
+    <pre>
+             __               
+            / /___  ____      
+       __  / / __ \/ __ \     
+      / /_/ / /_/ / / / /     
+      \____/\____/_/ /_/  ____
+         / __ \________  / / /
+        / /_/ / ___/ _ \/ / / 
+       / ____/ /  /  __/ / /  
+      /_/   /_/   \___/_/_/                    
+		</pre>
+    <p>Documentation: type "help"</p>
+    <div id="output"></div>
+    <div class="input-block">
+      <span>{"$>"}</span>
+      <input type="text" />
+    </div>
+  </div>
+</Layout>
+
+<script>
+  import "../scripts/terminal.ts";
+</script>

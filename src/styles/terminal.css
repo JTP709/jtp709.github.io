@@ -1,0 +1,82 @@
+body {
+  background-color: black;
+  background-image: radial-gradient(rgba(0, 150, 0, 0.75), black 120%);
+  background-attachment: fixed;
+  height: 100vh;
+  color: white;
+  font:
+    1.3rem Inconsolata,
+    monospace;
+  text-shadow: 0 0 5px #c8c8c8;
+}
+h1,
+datetime,
+p {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  line-height: 1.5;
+}
+span {
+  color: #ffd557;
+  margin-right: 0.5rem;
+}
+input {
+  background: transparent;
+  border: none;
+  color: white;
+  font: inherit;
+  font-size: inherit;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  caret-color: #ffd557;
+}
+.input-block {
+  display: flex;
+  align-items: center;
+}
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  touch-action: none;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+}
+body::-moz-after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(black, 0.15),
+    rgba(black, 0.15) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+}
+::selection {
+  background: #0080ff;
+  text-shadow: none;
+}
+h1::-moz-selection,
+datetime::-moz-selection,
+span::-moz-selection,
+p::-moz-selection {
+  background: #0080ff;
+  text-shadow: none;
+}
